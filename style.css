@@ -1,0 +1,80 @@
+body{
+    background-color: black;
+}
+#section{
+    display: grid;
+    grid-template-columns: 2fr 6fr 3fr 2fr;
+}
+
+#main{
+    margin-right: 20px;
+    margin-left: 26px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: 57px 336px 42px 584px;
+}
+
+#run{
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
+
+#runGraph{
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
+
+#sub{
+    margin-right: 26px;
+    margin-left: 20px;
+    border: 1px solid red;
+    display: grid;
+    grid-auto-rows: 57px 154px 34px 274px 35px 465px;
+}
+
+#move{
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#gotoHome{
+    background-color: #c4c4c4;
+    margin: 20px;
+    border-radius: 20px;
+}
+#gotoWorkOut{
+    background-color: #c4c4c4;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#gotoMypage{
+    background-color: #c4c4c4;
+    margin: 20px;
+    border-radius: 20px;
+}
+#burnKcal{
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-rows: 74px 200px;
+}
+#nameDisplay{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#KcalDisplay{
+    background-color: #c4c4c4;
+    margin: 10px 20px 20px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+#whatKcal{
+    font-size: 53px;
+}
+#submit{
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
