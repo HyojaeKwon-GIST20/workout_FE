@@ -3,13 +3,13 @@ body{
 }
 #section{
     display: grid;
-    grid-template-columns: 2fr 6fr 3fr 2fr;
+    grid-template-columns: 2fr 805px 405px 2fr;
 }
 
 #main{
     margin-right: 20px;
     margin-left: 26px;
-    border: 1px solid red;
+    
     display: grid;
     grid-template-rows: 57px 336px 42px 584px;
 }
@@ -17,6 +17,8 @@ body{
 #run{
     border-radius: 20px;
     background-color: #f4f4f4;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
 }
 
 #runGraph{
@@ -27,7 +29,7 @@ body{
 #sub{
     margin-right: 26px;
     margin-left: 20px;
-    border: 1px solid red;
+    
     display: grid;
     grid-auto-rows: 57px 154px 34px 274px 35px 465px;
 }
@@ -40,18 +42,18 @@ body{
 }
 #gotoHome{
     background-color: #c4c4c4;
-    margin: 20px;
+    margin: 30px 15px 25px 15px;
     border-radius: 20px;
 }
 #gotoWorkOut{
     background-color: #c4c4c4;
-    margin: 20px;
+    margin: 30px 15px 25px 15px;
     border-radius: 20px;
 }
 
 #gotoMypage{
     background-color: #c4c4c4;
-    margin: 20px;
+    margin: 30px 15px 25px 15px;
     border-radius: 20px;
 }
 #burnKcal{
@@ -71,10 +73,79 @@ body{
     border-radius: 20px;
     text-align: center;
 }
+#burn{
+    font-size: 40px;
+}
 #whatKcal{
     font-size: 53px;
 }
 #submit{
     border-radius: 20px;
     background-color: #f4f4f4;
+}
+#submittext{
+    text-align: center;
+    font-size: 36px;
+    margin: 40px 10px 40px 10px;
+}
+.text-input{
+font-family: 'Fjalla One', sans-serif;
+  font-size: 30px;
+  width: 80%;
+  border: none;
+  border-radius: 15px;
+  padding:10px;
+  display: table;
+  background-color: #c4c4c4;
+  margin: auto;
+  color: black;
+}
+select{
+    font-family: 'Fjalla One', sans-serif;
+  font-size: 30px;
+  width: 85%;
+  border: none;
+  border-radius: 15px;
+  padding:10px;
+  display: table;
+  background-color: #c4c4c4;
+  margin: auto;
+  color: black;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+}
+#submit-btn{
+    font-family: 'Fjalla One', sans-serif;
+    display: table;
+  font-size: 30px;
+  background-color: #9b9b9b;
+  color: white;
+  width: 86%;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  margin: auto;
+}
+
+#runGraph{
+    display: grid;
+    grid-template-rows: 10fr 28fr;
+}
+#run_text{
+    border-radius: 10px;
+    background-color: #D9D8D6;
+    font-size: 35px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    margin: 40px 170px 20px 170px;    
+}
+#run_present{
+    margin: 35px 30px 10px 30px;
+    text-align: center;
+    font-size: 40px;
+}
+#top_present{
+    margin: 35px 30px 10px 30px;
+    text-align: center;
+    font-size: 80px;
 }

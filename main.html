@@ -1,24 +1,125 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+            .font{
+                font-family: 'Fjalla One', sans-serif;    
+            }            
+        </style>
         <title>
+            Running Coach
         </title>
         <meta charset="utf-8">
+    
     </head>
     <link rel = "stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    <script>
+        var count = 0 ; 
+
+    var weeklyTotal;
+    var totalKm;
+    var totalKcal;
+    var kmArray = new Array[7];
+    var boolArr = new Array[7];
+
+
+    function calculateTotal(boolArr,kmArray){
+        var result
+        for( i = 0 ; i < 7 ; i++){
+         if(boolArr[i]===true){
+             result += kmArray[i]
+         }
+        }
+        return result
+    }
+    var right=false;
+    const button = document.querySelector('button');
+    //value들어오면 변화
+    $('#weight_input').on('input',checkInput);
+    $('#running_input').on('input',checkInput);
+    $('#day_input').on('input',checkInput);
+    //value 있는지 확인하는 함수
+    function checkInput(){
+            
+            var weight = $('#weight_input').val();
+               
+            var running = $('#running_input').val();
+            var day = $('#day_input').val();
+            
+            
+                
+                if(weight == '' || running == ''){
+                    $('#submit-btn').css('background-color','#9b9b9b');
+                    right === false
+                }
+                else{
+                    $('#submit-btn').css('background-color','##FF0C0');
+                    right === true
     
+                }
+            };
+    button.addEventListener('click',event => {
+            
+            if(right == true){
+                var running = $('#running_input').val();
+                totalKcal = totalKcal + running*0.5
+                var txtString = totalKcal + " KM"
+                txt.innerHTML = totalKcal;
+            }
+            if(right===true){
+
+            }
+        });        
+    const KcalTxt = document.getElementById('whatKcal');
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
     <body>
-        <div id = "section">
+        <div id = "section" class ="font">
             <div>
             </div>
             <div id = "main">
                 <div>
                 </div>
                 <div id ="run">
+                    <div id = "run_present">
+                        __Km in this Week   
+                    </div>
+                    <div id="top_present">
+                        TOP 14%
+                    </div>
                 </div>
                 <div>
                 </div>
                 <div id = "runGraph">
+                    <div>
+                        <div id = "run_text">
+                            Weekly Running
+                        </div>
+                    </div>
+                    <div>
+                    </div>
                 </div>
             </div>
             <div id="sub">
@@ -26,6 +127,10 @@
                 </div>
                 <div id = "move">
                     <div id="gotoHome">
+                        <img class="fic"
+                        src = "./function.jpg"
+                        width="100"
+                        height="110">
                     </div>
                     <div id="gotoWorkOut">
                     </div>
@@ -39,17 +144,39 @@
                         Hyojae, Kwon
                     </div>
                     <div id="KcalDisplay">
-                        <div>
+                        <div id="KcalDisplay.text">
+                            <div id="burn">
                             Burn
                         </div>
+                        <br>
                         <div id="whatKcal">
-                            521 Kcal
+                            ___ Kcal
                         </div>
-                    </div>                    
+
+                        </div>
+                     </div>                    
                 </div>
                 <div>
                 </div>
                 <div id = "submit">
+                    <div id = "submittext">Submit Workout</div>
+                    <div>
+                        
+<select name="day" id ="day_input">
+    <option value="mon">Monday</option>
+    <option value="tue">Tuesday</option>
+    <option value="wed">Wedensday</option>
+    <option value="thu">thursday</option>
+    <option value="fri">friday</option>
+    <option value="set">saturday</option>
+    <option value="sun">sunday</option>
+</select><br>
+                        <input type="text" name = "name" class ="text-input" id ="weight_input"  placeholder="Weight"><br>
+                        <input type="text" name = "name" class ="text-input" id ="running_input" placeholder="Running"><br>
+                    </div>
+                    <div>
+                        <button type="button"  id="submit-btn">Submit</button>
+                    </div>  
                 </div>                
             </div>
             <div>
